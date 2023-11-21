@@ -1,10 +1,11 @@
 import axios from "axios";
+
 import { API } from "config/global-config";
 
-type loginBody = {
-  fullName: string;
-  mail: string;
-};
+import { IPackage, loginBody } from "./types";
 
 export const registerUser = (data: loginBody) =>
   axios.post(`${API.mockApi}/signup`, data);
+
+export const offerPackages = () =>
+  axios.get<IPackage[]>(`${API.mockApi}/packages`);
