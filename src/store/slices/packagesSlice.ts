@@ -7,6 +7,7 @@ import { IPackagesInitialState } from "./types";
 
 const initialState: IPackagesInitialState = {
   packages: [],
+  selectedPackage: null,
   isLoading: false,
   error: null,
 };
@@ -14,7 +15,11 @@ const initialState: IPackagesInitialState = {
 const packagesSlice = createSlice({
   name: "packages",
   initialState,
-  reducers: {},
+  reducers: {
+    setSelectedPackage: (state, action) => {
+      state.selectedPackage = action.payload;
+    },
+  },
   extraReducers: builder => {
     builder.addCase(getPackages.pending, state => {
       state.isLoading = true;
@@ -34,3 +39,4 @@ const packagesSlice = createSlice({
 });
 
 export default packagesSlice.reducer;
+export const { setSelectedPackage } = packagesSlice.actions;
