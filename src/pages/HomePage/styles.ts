@@ -3,8 +3,6 @@ import { colors } from "theme";
 export const mainFlex: React.CSSProperties = {
   borderRadius: "16px ",
   backgroundColor: "white",
-  width: "80%",
-  margin: "80px auto",
   padding: "50px 30px",
 };
 

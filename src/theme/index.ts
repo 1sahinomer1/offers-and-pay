@@ -5,4 +5,5 @@ export const colors = {
   borderGray: "#DFDFDF",
   selectedGreen: "#7AC500",
   mainBorder: "#E4E4E4",
+  textAreaBorder: "#E1E1E1",
 };
