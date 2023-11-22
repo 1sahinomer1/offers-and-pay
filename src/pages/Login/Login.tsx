@@ -15,6 +15,7 @@ import { loginUser } from "store/thunks/authThunks";
 const Login: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+
   const onFinish = (values: any) => {
     dispatch(loginUser(values)).then(() => {
       navigate("/packages");
