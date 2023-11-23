@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Offers And Pay
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+After registering as a member in this project, you can choose special packages for you and look at the details of the packages.
+You can buy the packages that suit you and pay with your card.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+offers-and-pay.vercel.app
 
-### `npm start`
+![Logo](https://egirisim.com/wp-content/uploads/2022/09/paramtech.jpeg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Used Technologies
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Client:** React, Redux, Redux Toolkit, Redux-Thunk, React-Toastify, Antd, Axios, Prettier, React-icons
 
-### `npm test`
+**Deployment:** Vercel
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Ekran Görüntüleri
 
-### `npm run build`
+_Register Page_
+![Register Page](https://i.hizliresim.com/4lisnju.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_Home Page_
+![Home Page](https://i.hizliresim.com/mef00xq.jpg)
 
-### `npm run eject`
+_Detail Page_
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Detail Page](https://i.hizliresim.com/f2cr8yy.jpg)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_Checkout Page_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Checkout Page](https://i.hizliresim.com/4c5qhts.jpg)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+_Success Page_
 
-## Learn More
+![Success Page](https://i.hizliresim.com/g9y0ov0.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Run on your computer
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clone the project
+
+```bash
+  git clone https://github.com/1sahinomer1/offers-and-pay
+```
+
+Proje dizinine gidin
+
+```bash
+  cd offers-and-pay
+```
+
+Install the required packages
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
+## Lisans
+
+[MIT](https://choosealicense.com/licenses/mit/)
