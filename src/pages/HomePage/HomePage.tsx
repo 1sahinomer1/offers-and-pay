@@ -1,5 +1,6 @@
 import { Button, Col, Flex, Row, Typography } from "antd";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Package } from "components";
 
@@ -16,6 +17,7 @@ const HomePage = () => {
   const { Text } = Typography;
 
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const { packages } = useAppSelector(state => state.packages);
   const { myBasket } = useAppSelector(state => state.basket);
 
@@ -41,7 +43,14 @@ const HomePage = () => {
             </Text>
           </Flex>
 
-          <Button type="primary" htmlType="submit">
+          <Button
+            type="primary"
+            htmlType="submit"
+            disabled={myBasket.length === 0}
+            onClick={() => {
+              navigate("/checkout");
+            }}
+          >
             Devam Et
           </Button>
         </Flex>

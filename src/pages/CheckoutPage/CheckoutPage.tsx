@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 import { Form, Flex, Input, Typography } from "antd";
 
 import { MainLayout } from "layouts";
@@ -22,6 +24,9 @@ import {
 const CheckoutPage = () => {
   const dispatch = useAppDispatch();
 
+  const [form] = Form.useForm();
+  const navigate = useNavigate();
+
   const { contractText } = useAppSelector(state => state.payment);
   const { myBasket } = useAppSelector(state => state.basket);
 
@@ -30,8 +35,6 @@ const CheckoutPage = () => {
   useEffect(() => {
     dispatch(getContract());
   }, [dispatch]);
-
-  const [form] = Form.useForm();
 
   const handleCardInputChange = (
     e: React.ChangeEvent<HTMLInputElement>
@@ -59,7 +62,6 @@ const CheckoutPage = () => {
   const handleButtonClick = async () => {
     try {
       await form.validateFields();
-
       const formValues = form.getFieldsValue();
       const cardNumberWithoutSpaces = formValues.cardNumber.replaceAll(" ", "");
       const selectedPacketIds = myBasket.map(packet => packet.id);
@@ -70,12 +72,15 @@ const CheckoutPage = () => {
         cardNumber: cardNumberWithoutSpaces,
       };
 
-      const paymentResponse = await dispatch(createPayment(requestObject));
-    } catch (error) {
-      console.log("Formda eksik veya hatalı alanlar var.");
+      const res: any = await dispatch(createPayment(requestObject));
+
+      if (!res.error) {
+        navigate("/success");
+      }
+    } catch (err) {
+      toast.error("formda bir şeyler eksik yada hatalı");
     }
   };
-
   return (
     <MainLayout>
       <Flex style={containerFlex} justify="space-between">
