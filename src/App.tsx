@@ -1,9 +1,16 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-
-import { CheckoutPage, Homepage, Login, PackageDetailPage } from "./pages";
-import { Provider } from "react-redux";
-import { store } from "./store/store";
 import { ToastContainer } from "react-toastify";
+import { Provider } from "react-redux";
+
+import {
+  CheckoutPage,
+  Homepage,
+  Login,
+  PackageDetailPage,
+  SuccessPage,
+} from "./pages";
+
+import { store } from "./store/store";
 
 function App() {
   return (
@@ -14,6 +21,7 @@ function App() {
           <Route path="/packages" element={<Homepage />} />
           <Route path="/packages/:id" element={<PackageDetailPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/success" element={<SuccessPage />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer
