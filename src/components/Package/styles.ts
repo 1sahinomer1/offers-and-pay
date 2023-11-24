@@ -4,7 +4,6 @@ export const mainFlex = (isSelected: boolean) => ({
   borderRadius: "8px",
   backgroundColor: colors.smoke,
   height: "160px",
-  cursor: "pointer",
   border: isSelected
     ? `2px solid ${colors.selectedGreen}`
     : "2px solid transparent",

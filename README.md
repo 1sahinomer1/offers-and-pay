@@ -47,7 +47,7 @@ Clone the project
   git clone https://github.com/1sahinomer1/offers-and-pay
 ```
 
-Proje dizinine gidin
+Go to the project directory
 
 ```bash
   cd offers-and-pay

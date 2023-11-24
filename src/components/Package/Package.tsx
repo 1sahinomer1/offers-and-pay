@@ -76,6 +76,7 @@ const Package = ({ packet }: PackageProps) => {
             <IoBagAdd
               size={25}
               color={colors.selectedGreen}
+              cursor={"pointer"}
               onClick={() => handlePackageClick(packet.id)}
             />
           </Flex>
@@ -93,6 +94,7 @@ const Package = ({ packet }: PackageProps) => {
             size={25}
             color={colors.darkGray}
             onClick={handleRedirectDetail}
+            cursor={"pointer"}
           />
         </Flex>
       </Flex>
